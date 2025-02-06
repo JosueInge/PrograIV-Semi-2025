@@ -85,8 +85,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer bg-dark text-center">
-                                <input type="submit" value="Guardar" class="btn btn-primary">
+                            <div  class="card-footer bg-dark text-center">
+                                <input type="submit" value="Guardar" class="btn btn-primary m-3">
                                 <button type="button" @click="nuevoAlumno" class="btn btn-warning">Nuevo</button>
                             </div>
                         </div>
@@ -111,6 +111,7 @@
                                 <th>TELEFONO</th>
                                 <th>FECHA DE NACIMIENTO</th>
                                 <th>SEXO</th>
+                                <th>ELIMINAR</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -126,7 +127,7 @@
                                 <td>{{ alumno.fechaNacimiento }}</td>
                                 <td>{{ alumno.sexo }}</td>
                                 <td>
-                                    <button class="btn btn-danger btn-sm" @click="eliminarAlumno(alumno)">DEL</button>
+                                    <button class="btn btn-danger btn-sm m-3" @click="eliminarAlumno(alumno)">DEL</button>
                                 </td>
                             </tr>
                         </tbody>
