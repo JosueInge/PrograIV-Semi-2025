@@ -48,7 +48,9 @@
 
         <div class="container-fluid" id="appSistema">
             <alumno v-show="forms.alumno.mostrar" :forms="forms" ref="alumno"></alumno>
+            <buscaralumno v-show="forms.buscarAlumno.mostrar" ref="buscaralumno" @modificar="modificar('alumno', 'modificarAlumno', $event)"></buscaralumno>
             <materia v-show="forms.materia.mostrar" :forms="forms" ref="materia"></materia>
+            <buscarmateria v-show="forms.buscarMateria.mostrar" ref="buscarmateria" @modificar="modificar('materia', 'modificarMateria', $event)"></buscarmateria>
             <matricula-alumno v-show="forms.matriculaAlumno.mostrar" ref="matriculaAlumno"></matricula-alumno>
             <inscripcion-materias v-show="forms.inscripcionMaterias.mostrar" ref="inscripcionMaterias"></inscripcion-materias>
         </div>
@@ -58,7 +60,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="componentes/alumnos.js"></script>
+    <script src="componentes/busqueda_alumnos.js"></script>
     <script src="componentes/materias.js"></script>
+    <script src="componentes/busqueda_materias.js"></script>
     <script src="componentes/matricula_alumnos.js"></script>
     <script src="componentes/inscripcion_materias.js"></script>
     <script src="main.js"></script>
