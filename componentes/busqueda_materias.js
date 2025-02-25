@@ -35,7 +35,7 @@
     template: `
         <div class="row">
             <div class="col-6">
-                <table class="table table-sm table-bordered table-hover">
+                <table class="table table-sm table-bordered table-hover text-center">
                     <thead>
                         <tr>
                             <th>BUSCAR POR</th>
@@ -54,7 +54,7 @@
                             <th>CODIGO</th>
                             <th>NOMBRE</th>
                             <th>UV</th>  
-                            <th></th>
+                            <th>ELIMINAR</th>
                         </tr>
                     </thead>
                     <tbody>

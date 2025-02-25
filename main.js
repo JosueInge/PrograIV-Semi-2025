@@ -1,41 +1,34 @@
-const {createApp, ref} = Vue;
-const Dexie = window.Dexie,
-    db = new Dexie('db_academico');
+const { createApp, ref } = Vue;
 
 const app = createApp({
     components: {
         alumno,
         materia,
-        buscaralumno,
-        buscarmateria
+        matriculaAlumno,
+        inscripcionMaterias
     },
     data() {
         return {
-            forms : {
-                alumno: {mostrar: false},
-                buscarAlumno: {mostrar: false},
-                materia: {mostrar: false},
-                buscarMateria: {mostrar: false},
-                matricula: {mostrar: false},
-            },
+            forms: {
+                alumno: { mostrar: false },
+                materia: { mostrar: false },
+                docente: { mostrar: false },
+                matriculaAlumno: { mostrar: false },
+                inscripcionMaterias: { mostrar: false }
+            }
         };
     },
     methods: {
-        buscar(form, metodo) {
-            this.$refs[form][metodo]();
+        cerrarFormularios() {
+            Object.keys(this.forms).forEach(key => {
+                this.forms[key].mostrar = false;
+            });
         },
         abrirFormulario(componente) {
-            this.forms[componente].mostrar = !this.forms[componente].mostrar;
-        },
-        modificar(form, metodo, datos) {
-            this.$refs[form][metodo](datos);
+            this.cerrarFormularios();
+            this.forms[componente].mostrar = true;
         }
-    },
-    created() {
-        db.version(1).stores({
-            alumnos: '++idAlumno, codigo, nombre, direccion, telefono, email',
-            materias: '++idMateria, codigo, nombre, uv',
-        });
     }
 });
+
 app.mount('#app');
