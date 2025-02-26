@@ -2,15 +2,14 @@ const inscripcionMaterias = {
     props: ['forms'],
     data() {
         return {
-            idAlumno: '',
-            nombreCompleto: '',
-            periodoAcademico: '',
-            fechaInscripcion: ''
+            idInscripcion: '',
+            alumno: '',
+            fechainscripcion: '',
         };
     },
     methods: {
         guardarInscripcion() {
-            console.log("Inscripción guardada:", this.idAlumno, this.nombreCompleto, this.periodoAcademico, this.fechaInscripcion);
+            console.log("Inscripción guardada:", this.idInscripcion, this.alumno, this.pechainscripcion);
         }
     },
     template: `
@@ -21,21 +20,9 @@ const inscripcionMaterias = {
                 <div class="card-header bg-dark text-white">Inscripción de Materias</div>
                 <div class="card-body">
                     <div class="row p-1">
-                        <div class="col-3 col-md-3">ID Alumno</div>
+                        <div class="col-3 col-md-3">alumno</div>
                         <div class="col-9 col-md-6">
-                            <input v-model="idAlumno" type="text" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="row p-1">
-                        <div class="col-3 col-md-3">Nombre Completo</div>
-                        <div class="col-9 col-md-6">
-                            <input v-model="nombreCompleto" type="text" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="row p-1">
-                        <div class="col-3 col-md-3">Período Académico</div>
-                        <div class="col-9 col-md-6">
-                            <input v-model="periodoAcademico" type="text" class="form-control" required>
+                            <input v-model="Alumno" type="text" class="form-control" required>
                         </div>
                     </div>
                     <div class="row p-1">

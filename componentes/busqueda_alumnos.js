@@ -39,6 +39,11 @@
                                     <option value="direccion">DIRECCION</option>
                                     <option value="telefono">TELEFONO</option>
                                     <option value="email">EMAIL</option>
+                                    <option value="departamento">DEPARTAMENTO</option>
+                                    <option value="municipio">MUNICIPIO</option>
+                                    <option value="distrito">DISTRITO</option>
+                                    <option value="fechanacimiento">FECHA NAC.</option>
+                                    <option value="genero">GENERO</option>
                                 </select>
                             </th>
                             <th colspan="4">
@@ -51,6 +56,11 @@
                             <th>DIRECCION</th>
                             <th>TELEFONO</th>
                             <th>EMAIL</th>
+                            <th>DEPARTAMENTO</th>
+                            <th>MUNICIPIO</th>
+                            <th>DISTRITO</th>
+                            <th>FECHA NAC.</th>
+                            <th>GENERO</th>
                             <th>ELIMINAR</th>
                         </tr>
                     </thead>
@@ -61,6 +71,11 @@
                             <td>{{ alumno.direccion }}</td>
                             <td>{{ alumno.telefono }}</td>
                             <td>{{ alumno.email }}</td>
+                            <td>{{ alumno.departamento }}</td>
+                            <td>{{ alumno.municipio }}</td>
+                            <td>{{ alumno.distrito }}</td>
+                            <td>{{ alumno.fechanacimiento }}</td>
+                            <td>{{ alumno.genero }}</td>
                             <td>
                                 <button class="btn btn-danger btn-sm" 
                                     @click.stop="eliminarAlumno(alumno)">DEL</button>

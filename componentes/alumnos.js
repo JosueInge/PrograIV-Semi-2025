@@ -9,7 +9,12 @@
             nombre: '',
             direccion: '',
             telefono: '',
-            email: ''
+            email: '',
+            departamento: '',
+            municipio: '',
+            distrito: '',
+            fechanacimiento: '',
+            genero: ''
         }
     },
     methods: {
@@ -25,6 +30,11 @@
             this.direccion = alumno.direccion;
             this.telefono = alumno.telefono;
             this.email = alumno.email;
+            this.departamento = alumno.departamento;
+            this.municipio = alumno.municipio;
+            this.distrito = alumno.distrito;
+            this.fechanacimiento = alumno.fechanacimiento;
+            this.genero = alumno.genero;
         },
         guardarAlumno() {
             let alumno = {
@@ -32,7 +42,12 @@
                 nombre: this.nombre,
                 direccion: this.direccion,
                 telefono: this.telefono,
-                email: this.email
+                email: this.email,
+                departamento: this.departamento,
+                municipio: this.municipio,
+                distrito: this.distrito,
+                fechanacimiento: this.fechanacimiento,
+                genero: this.genero
             };
             if (this.accion == 'modificar') {
                 alumno.idAlumno = this.idAlumno;
@@ -48,6 +63,11 @@
             this.direccion = '';
             this.telefono = '';
             this.email = '';
+            this.departamento = '';
+            this.municipio = '';
+            this.distrito = '';
+            this.fechanacimiento = '';
+            this.genero = '';
         }
     },
     template: `
@@ -85,6 +105,41 @@
                                 <div class="col-3 col-md-2">EMAIL</div>
                                 <div class="col-9 col-md-6">
                                     <input v-model="email" type="text" name="txtEmailAlumno" id="txtEmailAlumno" class="form-control">
+                                </div>
+                            </div>
+                            <!-- Nuevos campos -->
+                            <div class="row p-1">
+                                <div class="col-3 col-md-2">DEPARTAMENTO</div>
+                                <div class="col-9 col-md-6">
+                                    <input v-model="departamento" type="text" name="txtDepartamentoAlumno" id="txtDepartamentoAlumno" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-3 col-md-2">MUNICIPIO</div>
+                                <div class="col-9 col-md-6">
+                                    <input v-model="municipio" type="text" name="txtMunicipioAlumno" id="txtMunicipioAlumno" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-3 col-md-2">DISTRITO</div>
+                                <div class="col-9 col-md-6">
+                                    <input v-model="distrito" type="text" name="txtDistritoAlumno" id="txtDistritoAlumno" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-3 col-md-2">FECHA NAC.</div>
+                                <div class="col-9 col-md-6">
+                                    <input v-model="fechaNacimiento" type="date" name="txtFechaNacimientoAlumno" id="txtFechaNacimientoAlumno" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-3 col-md-2">GÉNERO</div>
+                                <div class="col-9 col-md-6">
+                                    <select v-model="genero" name="txtGeneroAlumno" id="txtGeneroAlumno" class="form-control">
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>

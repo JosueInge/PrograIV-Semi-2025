@@ -142,4 +142,4 @@ const matriculaAlumno = {
             </div>
         </div>
     `
-};
+};3
